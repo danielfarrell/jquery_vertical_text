@@ -1,0 +1,23 @@
+jQuery Vertical Text Plugin
+===========================
+
+Basic plugin to give you vertical text.  It uses the html5 canvas so it will only work on modern browsers.
+
+It triggers and any element with a class of verticaltext by default but you can also trigger it yourself like so:
+
+$(document).ready(function(){
+  $('.yourclass').verticalText();
+});
+
+If you are on a pre-canvas browser, most likely IE6-8, you can actually do this with CSS like so:
+
+.verticaltext
+  writing-mode: tb-rl
+  filter: flipv fliph
+  display: inline-block
+  white-space: nowrap
+  padding: 0
+  margin: 0
+  width: auto
+
+Built this because we were using that CSS for some vertical headers and wanted to move off of IE for those users.  Sharing it because it might be useful to someone else.
